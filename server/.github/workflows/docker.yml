@@ -13,7 +13,7 @@ jobs:
 
     steps:
 
-      - name: Checkout Code
+      - name: Checkout Source
         uses: actions/checkout@v4
 
       - name: Login to Docker Hub
@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t priyanshu1607/food-for-all ./server
+        run: docker build -t priyanshu8948/food-for-all ./server
 
       - name: Push Docker Image
-        run: docker push priyanshu1607/food-for-all
+        run: docker push priyanshu8948/food-for-all
